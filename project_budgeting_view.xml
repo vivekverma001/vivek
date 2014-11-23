@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="project_resource_allocation" model="ir.ui.view">
+		<field name="name">project.project.resource.form</field>
+		<field name="model">project.project</field>
+		<field name="inherit_id" ref="project.edit_project"/>
+		<field name="arch" type="xml">
+			<xpath expr="//page[@string='Project Stages']" position="after">
+				<page string="Resources">
+					<field name="resource_lines">
+						<tree string="Resource" editable="bottom">
+							<field name="name" required="1"/>
+							<field name="user_id" required="1"/>
+							<field name="product_id" required="1"/>
+							<field name="hours" required="1"/>
+						</tree>
+					</field>
+				</page>
+			</xpath>
+		</field>
+		</record>
+								
+							
+
+
+
+	</date>
+</openerp>
